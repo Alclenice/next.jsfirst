@@ -1,40 +1,32 @@
-import Link from 'next/link';
-import Heading from '../components/Heading';
-//import { getFeatureReview } from '@/lib/reviews';
+import Heading from "../../components/Heading";
 
-// home page title
 export const metadata = {
-    title: {
-        default: 'Indie Gamer',
-        template: '%s | Indie Gamer',
-    },
+    title: 'About',
 };
-// Todo load featured review
-export default function HomePage() {
-   // const review = await = await getFeatureReview();
-    console.log('[HomePage] rendering');
+
+export default function AboutPage() {
     return (
         <>
-        <Heading>Stardew Valley</Heading>
-        <p className='pb-3'>
-            Only the best indie games, reviewed for you.
+        <Heading>About</Heading>
+        <p>
+            A website created to learn Next.js.</p><p>
+            Stardew Valley is a 2016 farm life simulation role-playing video 
+            game developed by Eric "ConcernedApe" Barone. </p>
+            <p>
+            Players take the role of a character who inherits
+             their deceased grandfather's
+             dilapidated farm in a place known<p>
+             Stardew Valley is a 2016 farm life simulation role-playing video game developed by Eric 
+             "ConcernedApe" Barone. Players take the role of a character who inherits their deceased
+              grandfather's dilapidated farm in a place known as "Stardew Valley".
+               The game was originally released for Windows in February 2016 before being ported to other
+                platforms. Stardew Valley is an open-ended game, 
+                allowing players to grow crops,
+                 raise livestock, fish, cook, mine, forage, and socialize with the townspeople,
+                  including the ability to marry and have children.
+                   It allows up to eight players to play online together.
+             </p>
         </p>
-        <div className="bg-white border rounded shadow w-80 hover:shadow-xl sm:w-full">
-        <Link href="/reviews/stardew-valley"
-        className='flex flex-col sm:flex-row'>
-          <img src='/images/stardew-valley.jpg' alt='' 
-           width="320" height="180"
-            className="rounded-t sm:rounded-l sm:rounded-none"
-            />
-
-          <h2 className="fonte-semibold font-orbitron py-1 text-center">
-             Stardew Valley
-          </h2>
-          <shareLink />
-         </Link>
-        </div>
         </>
     );
 }
-
-
